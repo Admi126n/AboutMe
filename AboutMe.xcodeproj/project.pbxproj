@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		660D333129BFD31100773AE6 /* Readme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Readme.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		660D333129BFD31100773AE6 /* AboutMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AboutMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		660D333429BFD31100773AE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		660D333629BFD31100773AE6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		660D333829BFD31100773AE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
@@ -40,7 +40,7 @@
 		660D332829BFD31000773AE6 = {
 			isa = PBXGroup;
 			children = (
-				660D333329BFD31100773AE6 /* Readme */,
+				660D333329BFD31100773AE6 /* AboutMe */,
 				660D333229BFD31100773AE6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,12 +50,12 @@
 		660D333229BFD31100773AE6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				660D333129BFD31100773AE6 /* Readme.app */,
+				660D333129BFD31100773AE6 /* AboutMe.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		660D333329BFD31100773AE6 /* Readme */ = {
+		660D333329BFD31100773AE6 /* AboutMe */ = {
 			isa = PBXGroup;
 			children = (
 				660D333429BFD31100773AE6 /* AppDelegate.swift */,
@@ -66,15 +66,15 @@
 				660D333F29BFD31200773AE6 /* LaunchScreen.storyboard */,
 				660D334229BFD31200773AE6 /* Info.plist */,
 			);
-			path = Readme;
+			path = AboutMe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		660D333029BFD31100773AE6 /* Readme */ = {
+		660D333029BFD31100773AE6 /* AboutMe */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 660D334529BFD31200773AE6 /* Build configuration list for PBXNativeTarget "Readme" */;
+			buildConfigurationList = 660D334529BFD31200773AE6 /* Build configuration list for PBXNativeTarget "AboutMe" */;
 			buildPhases = (
 				660D332D29BFD31100773AE6 /* Sources */,
 				660D332E29BFD31100773AE6 /* Frameworks */,
@@ -84,9 +84,9 @@
 			);
 			dependencies = (
 			);
-			name = Readme;
+			name = AboutMe;
 			productName = Readme;
-			productReference = 660D333129BFD31100773AE6 /* Readme.app */;
+			productReference = 660D333129BFD31100773AE6 /* AboutMe.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -104,7 +104,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 660D332C29BFD31000773AE6 /* Build configuration list for PBXProject "Readme" */;
+			buildConfigurationList = 660D332C29BFD31000773AE6 /* Build configuration list for PBXProject "AboutMe" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -117,7 +117,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				660D333029BFD31100773AE6 /* Readme */,
+				660D333029BFD31100773AE6 /* AboutMe */,
 			);
 		};
 /* End PBXProject section */
@@ -292,7 +292,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Readme/Info.plist;
+				INFOPLIST_FILE = AboutMe/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AboutMe;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -304,7 +305,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.admi126n.Readme;
+				PRODUCT_BUNDLE_IDENTIFIER = com.admi126n.AboutMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -320,7 +321,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Readme/Info.plist;
+				INFOPLIST_FILE = AboutMe/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AboutMe;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -332,7 +334,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.admi126n.Readme;
+				PRODUCT_BUNDLE_IDENTIFIER = com.admi126n.AboutMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -343,7 +345,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		660D332C29BFD31000773AE6 /* Build configuration list for PBXProject "Readme" */ = {
+		660D332C29BFD31000773AE6 /* Build configuration list for PBXProject "AboutMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				660D334329BFD31200773AE6 /* Debug */,
@@ -352,7 +354,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		660D334529BFD31200773AE6 /* Build configuration list for PBXNativeTarget "Readme" */ = {
+		660D334529BFD31200773AE6 /* Build configuration list for PBXNativeTarget "AboutMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				660D334629BFD31200773AE6 /* Debug */,
