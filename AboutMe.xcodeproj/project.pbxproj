@@ -13,6 +13,9 @@
 		660D333C29BFD31100773AE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 660D333A29BFD31100773AE6 /* Main.storyboard */; };
 		660D333E29BFD31200773AE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 660D333D29BFD31200773AE6 /* Assets.xcassets */; };
 		660D334129BFD31200773AE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 660D333F29BFD31200773AE6 /* LaunchScreen.storyboard */; };
+		6612152D29C36040000477C7 /* GitHubManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6612152C29C36040000477C7 /* GitHubManager.swift */; };
+		6612152F29C360F7000477C7 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6612152E29C360F7000477C7 /* Repository.swift */; };
+		6612153129C3617C000477C7 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6612153029C3617C000477C7 /* K.swift */; };
 		6616FC6429C27227001B24C4 /* VT323-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6616FC6329C27227001B24C4 /* VT323-Regular.ttf */; };
 		66747E9129C3388900AFE39D /* GitHubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66747E9029C3388900AFE39D /* GitHubViewController.swift */; };
 		66747E9829C3466400AFE39D /* RepositoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66747E9629C3466400AFE39D /* RepositoryCell.xib */; };
@@ -28,6 +31,9 @@
 		660D333D29BFD31200773AE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		660D334029BFD31200773AE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		660D334229BFD31200773AE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6612152C29C36040000477C7 /* GitHubManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubManager.swift; sourceTree = "<group>"; };
+		6612152E29C360F7000477C7 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		6612153029C3617C000477C7 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		6616FC6329C27227001B24C4 /* VT323-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VT323-Regular.ttf"; sourceTree = "<group>"; };
 		66747E9029C3388900AFE39D /* GitHubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubViewController.swift; sourceTree = "<group>"; };
 		66747E9629C3466400AFE39D /* RepositoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepositoryCell.xib; sourceTree = "<group>"; };
@@ -75,6 +81,7 @@
 				660D333D29BFD31200773AE6 /* Assets.xcassets */,
 				660D333F29BFD31200773AE6 /* LaunchScreen.storyboard */,
 				660D334229BFD31200773AE6 /* Info.plist */,
+				6612153029C3617C000477C7 /* K.swift */,
 			);
 			path = AboutMe;
 			sourceTree = "<group>";
@@ -109,6 +116,8 @@
 		66747E8D29C334B600AFE39D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6612152C29C36040000477C7 /* GitHubManager.swift */,
+				6612152E29C360F7000477C7 /* Repository.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -186,9 +195,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6612152F29C360F7000477C7 /* Repository.swift in Sources */,
+				6612152D29C36040000477C7 /* GitHubManager.swift in Sources */,
 				66747E9929C3466400AFE39D /* RepositoryCell.swift in Sources */,
 				660D333929BFD31100773AE6 /* WelcomeViewController.swift in Sources */,
 				660D333529BFD31100773AE6 /* AppDelegate.swift in Sources */,
+				6612153129C3617C000477C7 /* K.swift in Sources */,
 				660D333729BFD31100773AE6 /* SceneDelegate.swift in Sources */,
 				66747E9129C3388900AFE39D /* GitHubViewController.swift in Sources */,
 			);

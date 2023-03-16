@@ -146,6 +146,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gUR-Bq-pie"/>
+                    <connections>
+                        <outlet property="tableView" destination="ZNr-pI-LZr" id="xMD-0o-4gv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fcB-8t-EWa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
