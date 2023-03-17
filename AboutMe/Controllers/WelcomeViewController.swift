@@ -13,7 +13,5 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-// https://api.github.com/users/admi126n/repos?sort=updated?direction=asc
 }
 

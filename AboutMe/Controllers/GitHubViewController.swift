@@ -11,6 +11,8 @@ class GitHubViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 	
+	var gitHubManager: GitHubManager = GitHubManager()
+
 	var repositories: [Repository] = [
 		Repository(name: "test", language: "test"),
 		Repository(name: "test1", language: "Admi126n")
@@ -18,6 +20,7 @@ class GitHubViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+		gitHubManager.getAvailableRepos()
 
 		tableView.dataSource = self
 		tableView.register(UINib(nibName: K.repoCellName, bundle: nil), forCellReuseIdentifier: K.repoCellIdentifier)
