@@ -42,7 +42,7 @@ struct GitHubManager {
 		var repositories: [Repository] = []
 		let decoder = JSONDecoder()
 		do {
-			let decodedData = try decoder.decode([RepositoryData].self, from: data)
+			let decodedData = try decoder.decode([Repository].self, from: data)
 			
 			for el in decodedData {
 				let repoName = el.name
