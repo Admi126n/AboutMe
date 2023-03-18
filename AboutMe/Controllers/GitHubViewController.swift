@@ -25,6 +25,8 @@ class GitHubViewController: UIViewController {
 		gitHubManager.getAvailableRepos()
 
 		tableView.dataSource = self
+		tableView.delegate = self
+		
 		tableView.register(UINib(nibName: K.repoCellName, bundle: nil), forCellReuseIdentifier: K.repoCellIdentifier)
     }
 
@@ -51,5 +53,13 @@ extension GitHubViewController: UITableViewDataSource {
 		}
 	
 		return cell
+	}
+}
+
+//MARK: - UITableViewDelegate
+
+extension GitHubViewController: UITableViewDelegate {
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		// go to next screen with github website
 	}
 }
