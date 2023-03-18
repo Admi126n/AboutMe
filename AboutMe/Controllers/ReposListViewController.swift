@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GitHubViewController: UIViewController {
+class ReposListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 	
@@ -24,11 +24,18 @@ class GitHubViewController: UIViewController {
 		tableView.register(UINib(nibName: K.repoCellName, bundle: nil), forCellReuseIdentifier: K.repoCellIdentifier)
 		gitHubManager.getAvailableRepos()
     }
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == K.gitHubPageSegue {
+			let destinationVC = segue.destination as! GitHubPageViewController
+			destinationVC.url = ""
+		}
+	}
 }
 
 //MARK: - UITableViewDataSource
 
-extension GitHubViewController: UITableViewDataSource {
+extension ReposListViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return repositories.count
 	}
@@ -52,15 +59,16 @@ extension GitHubViewController: UITableViewDataSource {
 
 //MARK: - UITableViewDelegate
 
-extension GitHubViewController: UITableViewDelegate {
+extension ReposListViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		performSegue(withIdentifier: K.gitHubPageSegue, sender: self)
 		// go to next screen with github website
 	}
 }
 
 //MARK: - GitHubManagerDelegate
 
-extension GitHubViewController: GitHubManagerDelegate {
+extension ReposListViewController: GitHubManagerDelegate {
 	func didFetchRepoData(repositories: [Repository]) {
 		self.repositories = repositories
 		
