@@ -11,8 +11,9 @@ class ReposListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 	
-	var gitHubManager: GitHubManager = GitHubManager()
-	var repositories: [Repository] = []
+	private var gitHubManager: GitHubManager = GitHubManager()
+	private var repositories: [Repository] = []
+	private var selectedRepo: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,7 @@ class ReposListViewController: UIViewController {
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if segue.identifier == K.gitHubPageSegue {
 			let destinationVC = segue.destination as! GitHubPageViewController
-			destinationVC.url = ""
+			destinationVC.repoName = selectedRepo
 		}
 	}
 }
@@ -61,8 +62,8 @@ extension ReposListViewController: UITableViewDataSource {
 
 extension ReposListViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		selectedRepo = repositories[indexPath.row].name
 		performSegue(withIdentifier: K.gitHubPageSegue, sender: self)
-		// go to next screen with github website
 	}
 }
 
@@ -78,6 +79,6 @@ extension ReposListViewController: GitHubManagerDelegate {
 	}
 	
 	func didFailWithError(error: Error) {
-		print("Fail")
+		print(error as Any)
 	}
 }

@@ -12,23 +12,22 @@ class GitHubPageViewController: UIViewController {
 
     @IBOutlet weak var webView: WKWebView!
     
-	var url: String?
+	private let baseURL: String = "https://github.com/Admi126n/"
+	var repoName: String?
 	
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+		performURLRequest()
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+	
+	func performURLRequest() {
+		if let safeRepoName = repoName {
+			if let safeURL = URL(string: baseURL + safeRepoName) {
+				let myRequest = URLRequest(url: safeURL)
+				webView.load(myRequest)
+			}
+		}
+		
+	}
 }
