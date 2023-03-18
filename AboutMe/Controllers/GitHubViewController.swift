@@ -43,9 +43,9 @@ extension GitHubViewController: UITableViewDataSource {
 		cell.languageLabel.text = repository.language
 		
 		if let safeImage = UIImage(named: repository.language) {
-			cell.languageLogo.image = safeImage
+			cell.langLogoImageView.image = safeImage
 		} else {
-			
+			cell.langLogoImageView.image = UIImage(systemName: K.defaultLangLogo)!
 		}
 	
 		return cell

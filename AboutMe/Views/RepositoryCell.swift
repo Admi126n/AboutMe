@@ -10,7 +10,7 @@ import UIKit
 class RepositoryCell: UITableViewCell {
 
     @IBOutlet weak var repositoryName: UILabel!
-    @IBOutlet weak var languageLogo: UIImageView!
+    @IBOutlet weak var langLogoImageView: UIImageView!
     @IBOutlet weak var languageLabel: UILabel!
     @IBOutlet weak var cellButton: UIButton!
     
