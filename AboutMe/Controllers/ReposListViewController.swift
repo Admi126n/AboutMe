@@ -7,12 +7,13 @@
 
 import UIKit
 
-class GitHubViewController: UIViewController {
+class ReposListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 	
-	var gitHubManager: GitHubManager = GitHubManager()
-	var repositories: [Repository] = []
+	private var gitHubManager: GitHubManager = GitHubManager()
+	private var repositories: [Repository] = []
+	private var selectedRepo: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +25,18 @@ class GitHubViewController: UIViewController {
 		tableView.register(UINib(nibName: K.repoCellName, bundle: nil), forCellReuseIdentifier: K.repoCellIdentifier)
 		gitHubManager.getAvailableRepos()
     }
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == K.gitHubPageSegue {
+			let destinationVC = segue.destination as! GitHubPageViewController
+			destinationVC.repoName = selectedRepo
+		}
+	}
 }
 
 //MARK: - UITableViewDataSource
 
-extension GitHubViewController: UITableViewDataSource {
+extension ReposListViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return repositories.count
 	}
@@ -52,15 +60,16 @@ extension GitHubViewController: UITableViewDataSource {
 
 //MARK: - UITableViewDelegate
 
-extension GitHubViewController: UITableViewDelegate {
+extension ReposListViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		// go to next screen with github website
+		selectedRepo = repositories[indexPath.row].name
+		performSegue(withIdentifier: K.gitHubPageSegue, sender: self)
 	}
 }
 
 //MARK: - GitHubManagerDelegate
 
-extension GitHubViewController: GitHubManagerDelegate {
+extension ReposListViewController: GitHubManagerDelegate {
 	func didFetchRepoData(repositories: [Repository]) {
 		self.repositories = repositories
 		
@@ -70,6 +79,6 @@ extension GitHubViewController: GitHubManagerDelegate {
 	}
 	
 	func didFailWithError(error: Error) {
-		print("Fail")
+		print(error as Any)
 	}
 }

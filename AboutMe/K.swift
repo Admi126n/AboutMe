@@ -11,4 +11,5 @@ struct K {
 	static let repoCellName = "RepositoryCell"
 	static let repoCellIdentifier = "ReusableRepoCell"
 	static let defaultLangLogo = "doc.text"
+	static let gitHubPageSegue = "ViewGitHubPage"
 }
