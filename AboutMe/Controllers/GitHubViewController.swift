@@ -14,8 +14,10 @@ class GitHubViewController: UIViewController {
 	var gitHubManager: GitHubManager = GitHubManager()
 
 	var repositories: [Repository] = [
-		Repository(name: "test", language: "test"),
-		Repository(name: "test1", language: "Admi126n")
+		Repository(name: "Swift Test", language: "Swift"),
+		Repository(name: "C# Test", language: "C#"),
+		Repository(name: "Python Test", language: "Python"),
+		Repository(name: "Random Lang Test", language: "Blah blah")
 	]
     
     override func viewDidLoad() {
