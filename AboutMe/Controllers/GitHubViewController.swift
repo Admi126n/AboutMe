@@ -12,24 +12,18 @@ class GitHubViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 	
 	var gitHubManager: GitHubManager = GitHubManager()
-
-	var repositories: [Repository] = [
-		Repository(name: "Swift Test", language: "Swift"),
-		Repository(name: "C# Test", language: "C#"),
-		Repository(name: "Python Test", language: "Python"),
-		Repository(name: "Random Lang Test", language: "Blah blah")
-	]
+	var repositories: [Repository] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-		gitHubManager.getAvailableRepos()
 
 		tableView.dataSource = self
 		tableView.delegate = self
+		gitHubManager.delegate = self
 		
 		tableView.register(UINib(nibName: K.repoCellName, bundle: nil), forCellReuseIdentifier: K.repoCellIdentifier)
+		gitHubManager.getAvailableRepos()
     }
-
 }
 
 //MARK: - UITableViewDataSource
@@ -61,5 +55,21 @@ extension GitHubViewController: UITableViewDataSource {
 extension GitHubViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		// go to next screen with github website
+	}
+}
+
+//MARK: - GitHubManagerDelegate
+
+extension GitHubViewController: GitHubManagerDelegate {
+	func didFetchRepoData(repositories: [Repository]) {
+		self.repositories = repositories
+		
+		DispatchQueue.main.async {
+			self.tableView.reloadData()
+		}
+	}
+	
+	func didFailWithError(error: Error) {
+		print("Fail")
 	}
 }

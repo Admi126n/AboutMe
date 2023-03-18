@@ -29,8 +29,8 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wkY-Aa-7X1">
                                                 <rect key="frame" x="0.0" y="0.0" width="263" height="30"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Repository Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLf-D9-jZJ">
-                                                        <rect key="frame" x="0.0" y="3" width="162" height="24"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Repository Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="XLf-D9-jZJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="263" height="30"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -38,7 +38,11 @@
                                                 </subviews>
                                                 <color key="backgroundColor" name="ElementsColor"/>
                                                 <constraints>
+                                                    <constraint firstItem="XLf-D9-jZJ" firstAttribute="top" secondItem="wkY-Aa-7X1" secondAttribute="top" id="EEH-60-yX0"/>
                                                     <constraint firstItem="XLf-D9-jZJ" firstAttribute="centerY" secondItem="wkY-Aa-7X1" secondAttribute="centerY" id="GJz-tX-SED"/>
+                                                    <constraint firstAttribute="bottom" secondItem="XLf-D9-jZJ" secondAttribute="bottom" id="Nxe-fE-F6Z"/>
+                                                    <constraint firstItem="XLf-D9-jZJ" firstAttribute="leading" secondItem="wkY-Aa-7X1" secondAttribute="leading" id="RTU-xM-6pS"/>
+                                                    <constraint firstAttribute="trailing" secondItem="XLf-D9-jZJ" secondAttribute="trailing" id="TKA-Vo-PGi"/>
                                                     <constraint firstItem="XLf-D9-jZJ" firstAttribute="leading" secondItem="wkY-Aa-7X1" secondAttribute="leading" id="o6j-Lb-G8p"/>
                                                 </constraints>
                                             </view>

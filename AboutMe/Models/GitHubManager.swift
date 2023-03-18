@@ -8,7 +8,7 @@
 import Foundation
 
 protocol GitHubManagerDelegate {
-	func didFetchRepoData()
+	func didFetchRepoData(repositories: [Repository])
 	func didFailWithError(error: Error)
 }
 
@@ -25,16 +25,12 @@ struct GitHubManager {
 			let session = URLSession(configuration: .default)
 			let task = session.dataTask(with: safeUrl) { data, response, error in
 				if error != nil {
-					print("There are some troubles...\n\(error as Any)")
+					self.delegate?.didFailWithError(error: error!)
 					return
 				}
 				if let safeData = data {
 					if let repoData =  self.parseJson(safeData) {
-						print(repoData.name)
-						print(repoData.language)
-//						self.delegate?.didFetchRepoData()
-					} else {
-						print("ass")
+						self.delegate?.didFetchRepoData(repositories: repoData)
 					}
 				}
 			}
@@ -42,17 +38,20 @@ struct GitHubManager {
 		}
 	}
 	
-	func parseJson(_ data: Data) -> Repository? {
+	func parseJson(_ data: Data) -> [Repository]? {
+		var repositories: [Repository] = []
 		let decoder = JSONDecoder()
 		do {
 			let decodedData = try decoder.decode([RepositoryData].self, from: data)
-			// TODO get all repos instead of getting first one :)
-			let repoName = decodedData[0].name
-			let repoLang = decodedData[0].language
 			
-			let repo = Repository(name: repoName, language: repoLang)
-			
-			return repo
+			for el in decodedData {
+				let repoName = el.name
+				let repoLang = el.language
+				
+				repositories.append(Repository(name: repoName, language: repoLang))
+			}
+		
+			return repositories
 		} catch {
 			self.delegate?.didFailWithError(error: error)
 			return nil
