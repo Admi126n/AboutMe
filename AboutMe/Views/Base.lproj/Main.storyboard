@@ -57,7 +57,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ukx-le-z6o">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="Ukx-le-z6o">
                                 <rect key="frame" x="20" y="130" width="374" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="vqu-gC-MRE"/>
@@ -259,12 +259,12 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZNr-pI-LZr">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="MainBackground"/>
                                 <color key="separatorColor" name="MainBackground"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="w4B-BW-7tB"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="MainBackground"/>
                         <constraints>
                             <constraint firstItem="ZNr-pI-LZr" firstAttribute="leading" secondItem="w4B-BW-7tB" secondAttribute="leading" id="8RS-Nh-Drg"/>
                             <constraint firstItem="w4B-BW-7tB" firstAttribute="bottom" secondItem="ZNr-pI-LZr" secondAttribute="bottom" id="LZW-qV-BRm"/>
