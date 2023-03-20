@@ -15,9 +15,12 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var appearanceControl: UISegmentedControl!
     @IBOutlet weak var languageControl: UISegmentedControl!
 	
+	let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
+		
+		appearanceControl.selectedSegmentIndex = defaults.integer(forKey: "appAppearance")
     }
     
     @IBAction func doneButtonPressed(_ sender: UIButton) {
@@ -25,14 +28,16 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func changeAppearance(_ sender: UISegmentedControl) {
-		// TODO save settings in user defaults
 		switch sender.selectedSegmentIndex {
         case 0:
-			view.window?.overrideUserInterfaceStyle = .dark
+			defaults.set(UIUserInterfaceStyle.unspecified.rawValue, forKey: "appAppearance")
+			view.window?.overrideUserInterfaceStyle = UIUserInterfaceStyle(rawValue: defaults.integer(forKey: "appAppearance"))!
         case 1:
-			view.window?.overrideUserInterfaceStyle = .light
+			defaults.set(UIUserInterfaceStyle.light.rawValue, forKey: "appAppearance")
+			view.window?.overrideUserInterfaceStyle = UIUserInterfaceStyle(rawValue: defaults.integer(forKey: "appAppearance"))!
         default:
-			view.window?.overrideUserInterfaceStyle = .unspecified
+			defaults.set(UIUserInterfaceStyle.dark.rawValue, forKey: "appAppearance")
+			view.window?.overrideUserInterfaceStyle = UIUserInterfaceStyle(rawValue: defaults.integer(forKey: "appAppearance"))!
         }
     }
 

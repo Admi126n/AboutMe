@@ -48,8 +48,8 @@
                                     <constraint firstItem="7F0-oB-974" firstAttribute="leading" secondItem="zOD-RR-vy4" secondAttribute="leading" id="o1c-cn-ZCq"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sjw-NB-Nzy">
-                                <rect key="frame" x="20" y="80" width="374" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appearance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sjw-NB-Nzy">
+                                <rect key="frame" x="20" y="40" width="374" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="eIR-4Q-qYB"/>
                                 </constraints>
@@ -58,21 +58,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="Ukx-le-z6o">
-                                <rect key="frame" x="20" y="130" width="374" height="31"/>
+                                <rect key="frame" x="20" y="90" width="374" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="vqu-gC-MRE"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="On"/>
-                                    <segment title="Off"/>
                                     <segment title="System"/>
+                                    <segment title="Light"/>
+                                    <segment title="Dark"/>
                                 </segments>
                                 <connections>
                                     <action selector="changeAppearance:" destination="MLI-hB-e1l" eventType="valueChanged" id="1rb-nw-Xtc"/>
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Lj-oC-DsL">
-                                <rect key="frame" x="20" y="200" width="374" height="30"/>
+                                <rect key="frame" x="20" y="160" width="374" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="9tM-fC-wDz"/>
                                 </constraints>
@@ -81,7 +81,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="q2u-5f-GhJ">
-                                <rect key="frame" x="20" y="250" width="374" height="31"/>
+                                <rect key="frame" x="20" y="210" width="374" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="6eY-iq-lgc"/>
                                 </constraints>
@@ -106,7 +106,7 @@
                             <constraint firstItem="Pu8-tC-ul3" firstAttribute="trailing" secondItem="Sjw-NB-Nzy" secondAttribute="trailing" constant="20" id="Exe-py-G34"/>
                             <constraint firstItem="Ukx-le-z6o" firstAttribute="top" secondItem="Sjw-NB-Nzy" secondAttribute="bottom" constant="20" id="IO9-qx-pNQ"/>
                             <constraint firstItem="Pu8-tC-ul3" firstAttribute="trailing" secondItem="9Lj-oC-DsL" secondAttribute="trailing" constant="20" id="K65-wB-FQL"/>
-                            <constraint firstItem="Sjw-NB-Nzy" firstAttribute="top" secondItem="zOD-RR-vy4" secondAttribute="bottom" constant="40" id="RZN-Yr-DK4"/>
+                            <constraint firstItem="Sjw-NB-Nzy" firstAttribute="top" secondItem="zOD-RR-vy4" secondAttribute="bottom" id="RZN-Yr-DK4"/>
                             <constraint firstItem="q2u-5f-GhJ" firstAttribute="leading" secondItem="Pu8-tC-ul3" secondAttribute="leading" constant="20" id="Sbg-kw-yLM"/>
                             <constraint firstItem="zOD-RR-vy4" firstAttribute="leading" secondItem="Pu8-tC-ul3" secondAttribute="leading" constant="20" id="Xdy-3J-gzx"/>
                             <constraint firstItem="9Lj-oC-DsL" firstAttribute="leading" secondItem="Pu8-tC-ul3" secondAttribute="leading" constant="20" id="ZXp-Fb-dOm"/>
