@@ -25,14 +25,14 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func changeAppearance(_ sender: UISegmentedControl) {
-		// TODO change appearance in whole app
+		// TODO save settings in user defaults
 		switch sender.selectedSegmentIndex {
         case 0:
-            overrideUserInterfaceStyle = .dark
+			view.window?.overrideUserInterfaceStyle = .dark
         case 1:
-            overrideUserInterfaceStyle = .light
+			view.window?.overrideUserInterfaceStyle = .light
         default:
-            overrideUserInterfaceStyle = .unspecified
+			view.window?.overrideUserInterfaceStyle = .unspecified
         }
     }
 
