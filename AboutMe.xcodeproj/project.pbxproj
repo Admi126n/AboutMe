@@ -17,6 +17,7 @@
 		6612152F29C360F7000477C7 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6612152E29C360F7000477C7 /* Repository.swift */; };
 		6612153129C3617C000477C7 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6612153029C3617C000477C7 /* K.swift */; };
 		6616FC6429C27227001B24C4 /* VT323-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6616FC6329C27227001B24C4 /* VT323-Regular.ttf */; };
+		662CE76129CB5FBA0094D5AC /* LaunchLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 662CE76029CB5FBA0094D5AC /* LaunchLogo.png */; };
 		664B897C29C64463008445CB /* GitHubPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B897B29C64463008445CB /* GitHubPageViewController.swift */; };
 		66747E9129C3388900AFE39D /* ReposListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66747E9029C3388900AFE39D /* ReposListViewController.swift */; };
 		66747E9829C3466400AFE39D /* RepositoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66747E9629C3466400AFE39D /* RepositoryCell.xib */; };
@@ -36,6 +37,7 @@
 		6612152E29C360F7000477C7 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		6612153029C3617C000477C7 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		6616FC6329C27227001B24C4 /* VT323-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VT323-Regular.ttf"; sourceTree = "<group>"; };
+		662CE76029CB5FBA0094D5AC /* LaunchLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchLogo.png; sourceTree = "<group>"; };
 		664B897B29C64463008445CB /* GitHubPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubPageViewController.swift; sourceTree = "<group>"; };
 		66747E9029C3388900AFE39D /* ReposListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListViewController.swift; sourceTree = "<group>"; };
 		66747E9629C3466400AFE39D /* RepositoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepositoryCell.xib; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				660D333F29BFD31200773AE6 /* LaunchScreen.storyboard */,
 				660D334229BFD31200773AE6 /* Info.plist */,
 				6612153029C3617C000477C7 /* K.swift */,
+				662CE76029CB5FBA0094D5AC /* LaunchLogo.png */,
 			);
 			path = AboutMe;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				6616FC6429C27227001B24C4 /* VT323-Regular.ttf in Resources */,
 				66747E9829C3466400AFE39D /* RepositoryCell.xib in Resources */,
 				660D333C29BFD31100773AE6 /* Main.storyboard in Resources */,
+				662CE76129CB5FBA0094D5AC /* LaunchLogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
