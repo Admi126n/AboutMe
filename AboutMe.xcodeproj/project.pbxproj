@@ -21,6 +21,7 @@
 		66747E9129C3388900AFE39D /* ReposListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66747E9029C3388900AFE39D /* ReposListViewController.swift */; };
 		66747E9829C3466400AFE39D /* RepositoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66747E9629C3466400AFE39D /* RepositoryCell.xib */; };
 		66747E9929C3466400AFE39D /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66747E9729C3466400AFE39D /* RepositoryCell.swift */; };
+		66F1EACB2A55C8F100DF3A6C /* AppearanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F1EACA2A55C8F100DF3A6C /* AppearanceManager.swift */; };
 		66FE4AA129C7A4C8003E95B2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FE4AA029C7A4C8003E95B2 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		66747E9029C3388900AFE39D /* ReposListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListViewController.swift; sourceTree = "<group>"; };
 		66747E9629C3466400AFE39D /* RepositoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepositoryCell.xib; sourceTree = "<group>"; };
 		66747E9729C3466400AFE39D /* RepositoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
+		66F1EACA2A55C8F100DF3A6C /* AppearanceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceManager.swift; sourceTree = "<group>"; };
 		66FE4AA029C7A4C8003E95B2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +126,7 @@
 			children = (
 				6612152C29C36040000477C7 /* GitHubManager.swift */,
 				6612152E29C360F7000477C7 /* Repository.swift */,
+				66F1EACA2A55C8F100DF3A6C /* AppearanceManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				660D333929BFD31100773AE6 /* WelcomeViewController.swift in Sources */,
 				660D333529BFD31100773AE6 /* AppDelegate.swift in Sources */,
 				6612153129C3617C000477C7 /* K.swift in Sources */,
+				66F1EACB2A55C8F100DF3A6C /* AppearanceManager.swift in Sources */,
 				660D333729BFD31100773AE6 /* SceneDelegate.swift in Sources */,
 				66747E9129C3388900AFE39D /* ReposListViewController.swift in Sources */,
 			);
