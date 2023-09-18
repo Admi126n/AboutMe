@@ -27,6 +27,10 @@ class ReposListViewController: UIViewController {
     }
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		let backItem = UIBarButtonItem()
+		backItem.title = ""
+		navigationItem.backBarButtonItem = backItem
+		
 		if segue.identifier == K.gitHubPageSegue {
 			let destinationVC = segue.destination as! GitHubPageViewController
 			destinationVC.repoName = selectedRepo
