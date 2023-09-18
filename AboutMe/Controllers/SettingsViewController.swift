@@ -11,9 +11,7 @@ class SettingsViewController: UIViewController {
 
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var appearanceLabel: UILabel!
-    @IBOutlet weak var languageLabel: UILabel!
     @IBOutlet weak var appearanceControl: UISegmentedControl!
-    @IBOutlet weak var languageControl: UISegmentedControl!
 	
 	let defaults = UserDefaults.standard
     
@@ -40,17 +38,4 @@ class SettingsViewController: UIViewController {
 			view.window?.overrideUserInterfaceStyle = UIUserInterfaceStyle(rawValue: defaults.integer(forKey: K.appAppearanceDefaults))!
 	    }
 	}
-
-    @IBAction func changeLanguage(_ sender: UISegmentedControl) {
-		switch sender.selectedSegmentIndex {
-		case 0:
-			doneButton.titleLabel?.text = "Done"
-		case 1:
-			doneButton.titleLabel?.text = "Hecho"
-		default:
-			doneButton.titleLabel?.text = "Gotowe"
-		}
-		doneButton.sizeToFit()
-		doneButton.titleLabel?.numberOfLines = 0
-    }
 }
